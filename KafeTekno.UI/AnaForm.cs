@@ -74,5 +74,10 @@ namespace KafeTekno.UI
 
             return siparis;
         }
+
+        private void tsmiGecmisSiparisler_Click(object sender, EventArgs e)
+        {
+            new GecmisSiparislerForm(db).ShowDialog();
+        }
     }
 }
