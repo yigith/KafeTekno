@@ -16,7 +16,7 @@ namespace KafeTekno.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GecmisSiparislerForm());
+            Application.Run(new AnaForm());
         }
     }
 }

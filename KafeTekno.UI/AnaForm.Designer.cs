@@ -67,6 +67,7 @@
             this.lvwMasalar.Size = new System.Drawing.Size(800, 426);
             this.lvwMasalar.TabIndex = 1;
             this.lvwMasalar.UseCompatibleStateImageBehavior = false;
+            this.lvwMasalar.DoubleClick += new System.EventHandler(this.lvwMasalar_DoubleClick);
             // 
             // AnaForm
             // 
