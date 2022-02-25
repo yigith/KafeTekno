@@ -108,7 +108,7 @@
             this.dgvSiparisDetaylar.ReadOnly = true;
             this.dgvSiparisDetaylar.RowHeadersVisible = false;
             this.dgvSiparisDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(599, 166);
+            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(599, 163);
             this.dgvSiparisDetaylar.TabIndex = 2;
             // 
             // label2
@@ -129,6 +129,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "GecmisSiparislerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Geçmiş Siparişler";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
