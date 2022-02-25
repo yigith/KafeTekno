@@ -57,9 +57,16 @@ namespace KafeTekno.UI
             lvi.ImageKey = "dolu";
             int masaNo = (int)lvi.Tag;
             Siparis siparis = SiparisBulYaDaOlustur(masaNo);
-            new SiparisForm(db, siparis).ShowDialog();
+            SiparisForm sf = new SiparisForm(db, siparis);
+            sf.MasaTasindi += Sf_MasaTasindi;
+            sf.ShowDialog();
             if (siparis.Durum != SiparisDurum.Aktif)
                 lvi.ImageKey = "bos";
+        }
+
+        private void Sf_MasaTasindi(object sender, MasaTasindiEventArgs e)
+        {
+            MasaTasi(e.EskiMasaNo, e.YeniMasaNo);
         }
 
         private Siparis SiparisBulYaDaOlustur(int masaNo)
@@ -83,6 +90,25 @@ namespace KafeTekno.UI
         private void tsmiUrunler_Click(object sender, EventArgs e)
         {
             new UrunlerForm(db).ShowDialog();
+        }
+
+        private void MasaTasi(int eskiMasaNo, int yeniMasaNo)
+        {
+            foreach (ListViewItem lvi in lvwMasalar.Items)
+            {
+                int masaNo = (int)lvi.Tag;
+
+                if (masaNo == eskiMasaNo)
+                {
+                    lvi.ImageKey = "bos";
+                    lvi.Selected = false;
+                }
+                else if (masaNo == yeniMasaNo)
+                { 
+                    lvi.ImageKey = "dolu";
+                    lvi.Selected = true;
+                }
+            }
         }
     }
 }
